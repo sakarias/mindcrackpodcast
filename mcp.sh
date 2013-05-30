@@ -23,7 +23,7 @@ do
 	episodeNumber=$(echo ${episode} | cut -d " " -f 2 | sed -e 's/^ *//g' -e 's/ *$//g')
 	extra=$(echo ${file} | cut -d "-" -f 3 | sed -e 's/^ *//g' -e 's/ *$//g')
 
-	AtomicParsley "${file}" --artist "MindCrack" --album "MindCrack" --title "${title} - ${episode} ${extra}" --tracknum ${episodeNumber} --podcastFlag true
+	AtomicParsley "${file}" --artist "MindCrack" --album "MindCrack" --title "${title} - ${episode} - ${extra}" --tracknum ${episodeNumber} --podcastFlag true
 
 	rm "${file}"
 done
